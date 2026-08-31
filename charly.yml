@@ -1,7 +1,7 @@
 version: 2026.232.0520
 agent-forwarding:
     candy:
-        version: 2026.144.1443
+        version: 2026.243.0100
         description: |
             Agent forwarding support — GPG, SSH, and direnv client tooling for the .secrets workflow
             agent-forwarding is a pure composition candy: it installs nothing of
@@ -12,9 +12,9 @@ agent-forwarding:
             and direnv client binaries are all present in any box that composes
             this candy — that is what the scenarios and check block assert.
         candy:
-            - '@github.com/opencharly/layer-gnupg:v2026.237.457'
-            - '@github.com/opencharly/layer-direnv:v2026.237.504'
-            - '@github.com/opencharly/layer-ssh-client:v2026.237.458'
+            - '@github.com/opencharly/layer-gnupg:v2026.239.1615'
+            - '@github.com/opencharly/layer-direnv:v2026.242.1147'
+            - '@github.com/opencharly/layer-ssh-client:v2026.239.1629'
         plan:
             - check: the GnuPG client binary is installed so a forwarded host GPG agent socket can be used for signing and decryption
               file:
