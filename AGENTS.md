@@ -11,7 +11,6 @@ Canonical files:
 
 - `charly.yml` — the `agent-forwarding:` candy entity and the
   `agent-forwarding-skill:` skill entity.
-- `.github/workflows/` — the org-wide `charly/pr-validator` gate; there is no per-repo candy gate.
 - `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
 - `README.md` — user overview only; never agent guidance.
 
@@ -30,8 +29,9 @@ Canonical files:
 
 - `charly box validate` at the repo root — the same structural gate CI runs.
   Keep the `version:` schema stamp within the installed charly's supported range.
-- The merge gate is the org-wide `charly/pr-validator` (required check
-  `validate / validate`); there is no per-repo candy gate.
+- The merge gate is the **org-wide** `charly/pr-validator` (required check
+  `validate / validate`, defined in `opencharly/.github`); this repo has no
+  per-repo candy gate.
 - There is no live bed: the candy is a composition, so the evidence is its
   `plan:` steps — the `gpg`, `ssh`, `ssh-add`, and `direnv` binaries exist and
   their packages are installed. The `agent-check:` step is exercised only where
