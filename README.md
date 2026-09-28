@@ -52,7 +52,6 @@ or `forward_ssh_agent false`, or per box in `charly.yml`.
 
 - `charly.yml` — the `agent-forwarding:` candy entity (composition, `plan:`
   checks) and the embedded `agent-forwarding-skill:` skill entity.
-- `.github/workflows/deploy.yml` — the manifest gate (`charly box validate`).
 - `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
 - `README.md` — this user overview.
 
