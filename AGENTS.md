@@ -27,7 +27,8 @@ Canonical files:
 
 ## Build / validate / test
 
-- `charly box validate` at the repo root — the same structural gate CI runs.
+- `charly box validate` at the repo root — the structural check: the manifest
+  must parse and validate at the installed charly.
   Keep the `version:` schema stamp within the installed charly's supported range.
 - The merge gate is the **org-wide** `charly/pr-validator` (required check
   `validate / validate`, defined in `opencharly/.github`); this repo has no
