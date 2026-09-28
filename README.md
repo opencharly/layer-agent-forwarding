@@ -26,13 +26,14 @@ users.
 
 ## How to use it
 
-Compose the layer in a box's `candy:` list:
+Compose the layer in a box definition. A box is a `candy:` mapping that carries
+the box's `base:` image and a nested `candy:` list of layer refs:
 
 ```yaml
 my-box:
   candy:
-    base: fedora
-    candy:
+    base: fedora          # the box's base image
+    candy:                # the box's composition list
       - '@github.com/opencharly/layer-agent-forwarding:<tag>'
 ```
 
